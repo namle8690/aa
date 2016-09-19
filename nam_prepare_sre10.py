@@ -70,6 +70,7 @@ with open('nist_existing_sph_files.p', "wb" ) as f:
 print("After listing, {} files found\n".format(len(completeFileList)))
 
 trn_male = sidekit.IdMap('task/original_sre10_coreX-coreX_m_trn.h5')
+ndx_male = sidekit.Ndx('task/original_sre10_coreX-coreX_m_ndx.h5')
 sre10_male_sessions = np.unique(np.concatenate((trn_male.rightids, ndx_male.segset), axis=1))
 
 # Load dataframe
